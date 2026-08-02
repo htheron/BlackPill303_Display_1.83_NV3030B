@@ -196,15 +196,22 @@ void setup()
   tft.setTextColor(TFT_WHITE,TFT_BLACK);
   tft.setTextFont(1);
   tft.setTextSize(2);
-  tft.setCursor(15,5);
-  tft.print(" Mini-Engine Monitor");
-  tft.setCursor(5,50);
-  tft.print("Blackpill303CCT6");
-  tft.setCursor(5,95);
-  tft.print("1.83\" V"); tft.print(SW_Version);
-  tft.setCursor(5,140);
-  sprintf(s_Dim,"NV3030B %d x %d",TFT_WIDTH,TFT_HEIGHT);
+  tft.setCursor(15,10);
+  tft.print(Proj_Name);
+  tft.setCursor(1,50);
+  tft.print(Proc_Name);
+  tft.setCursor(1,75);
+  sprintf(s_Dim, "LCD: %s", LCD_Num);
   tft.print(s_Dim);
+  tft.setCursor(1,100);
+  sprintf(s_Dim, "LCD Driver: %s", DRV_Name);
+  tft.print(s_Dim);
+  tft.setCursor(1,125);
+  sprintf(s_Dim, "Res: %d x %d",TFT_WIDTH,TFT_HEIGHT);
+  tft.print(s_Dim);
+  tft.setCursor(1,150);
+  tft.printf("SW Version: %s", SW_Version);
+  //tft.print(s_Dim);
 
   // calculate dial face angles
   adeg = 180/PI*asin((1.0*ArcXOrigin)/(1.0*DialRadius)); //half angle of the dispay arc range

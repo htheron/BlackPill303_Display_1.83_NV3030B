@@ -5,7 +5,11 @@
 
 #ifndef INCLUDE_BlackPill303_Display_H
 #define INCLUDE_BlackPill303_Display_H
-#define SW_Version 1.0
+#define Proj_Name "Mini Engine Monitor" 
+#define Proc_Name "Blackpill STM32F303CCT6"
+#define DRV_Name "NV3030B"
+#define LCD_Num "Waveshare #26784"
+#define SW_Version "1.0"
 #define LEDRate 2
 #define LEDPeriod 1000000/(2*LEDRate) //500000 //microsecond
 #define SampleRate 1000 //S/s
