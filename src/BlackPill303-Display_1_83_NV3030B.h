@@ -58,12 +58,16 @@
 #define NeedleRadius (DialRadius-LongTick-2)
 #define NeedleTipLength 14 // length of needle
 #define NeedleHWidth 1 // angular base width of needle
-#define sTextP1Height 15 // height of Auxiliary info sprite
-#define sTextP2Height 50 // height of Main pressure sprite
-#define sTextP1Width 30 // height of Auxiliary info sprite
-#define sTextP2Width (TFT_HEIGHT-6) //110 // Width of Main pressure sprite
+#define sTextP1Height (TFT_WIDTH/4-2) // 1/4 heighht of LCD - Landscape
+#define sTextP2Height (TFT_WIDTH/4-2) // 1/4 height of LCD
+#define sTextP1Width (TFT_HEIGHT/2-2) // Half LCD Width
+#define sTextP2Width (TFT_HEIGHT/2-2) //Half LCD Width
 #define sGraphWidth (TFT_HEIGHT-2) // width of graph sprite
-#define sGraphHeight sTextP2Height
+#define sGraphHeight (TFT_WIDTH/2-2) // half LCD height
+#define DField1Width sTextP1Width // derive from sprite dimensions
+#define DField1Height sTextP1Height
+#define DField2Width sTextP2Width
+#define DField2Height sTextP2Height
 #define GridlineInterval LEDRate*20
 #define mtoft (3.2808399)
 
