@@ -20,8 +20,8 @@ HardwareTimer *MyTim = new HardwareTimer(Instance);
 //TwoWire I2CDef;
 
 TFT_eSPI tft = TFT_eSPI();       // Invoke custom library
-TFT_eSprite stextP1 = TFT_eSprite(&tft); // Sprite object stextP1 - Display Field 1
-TFT_eSprite stextP2 = TFT_eSprite(&tft); // Sprite object stextP2 - Display field 2
+TFT_eSprite eS_Screen_1 = TFT_eSprite(&tft); // Sprite object stextP1 - Display Field 1
+TFT_eSprite eS_Screen_3 = TFT_eSprite(&tft); // Sprite object stextP2 - Display field 2
 TFT_eSprite sgraphP3 = TFT_eSprite(&tft); // Sprite object sgraphP3 - Graph display
 
 //Variables
@@ -94,20 +94,20 @@ void setup()
  
 
   // Create a sprites for data fields, TL, TR, 2L, 2R, 3L,3R, ...., BL, BR
-  stextP1.setColorDepth(8);
-  stextP1.createSprite(sTextP1Width, sTextP1Height); // top left data block
-  stextP1.fillSprite(TFT_BLACK); // Fill sprite with black
-  stextP1.setTextColor(TFT_WHITE); // White text, no background
+  eS_Screen_1.setColorDepth(8);
+  eS_Screen_1.createSprite(sTextP1Width, sTextP1Height); // top left data block
+  eS_Screen_1.fillSprite(TFT_BLACK); // Fill sprite with black
+  eS_Screen_1.setTextColor(TFT_WHITE); // White text, no background
   //stextP1.setTextDatum(C_BASELINE);  // Bottom right coordinate datum
-  stextP1.drawRect(0,0,sTextP1Width,sTextP1Height,TFT_WHITE);
+  eS_Screen_1.drawRect(0,0,sTextP1Width,sTextP1Height,TFT_WHITE);
 
   // Create a sprite for P1 [Hg] values and graph
-  stextP2.setColorDepth(8);
-  stextP2.createSprite(sTextP2Width,sTextP2Height); // top right data block
-  stextP2.fillSprite(TFT_BLACK); // Fill sprite with black
-  stextP2.setTextColor(TFT_WHITE); // White text, no background
+  eS_Screen_3.setColorDepth(8);
+  eS_Screen_3.createSprite(sTextP2Width,sTextP2Height); // top right data block
+  eS_Screen_3.fillSprite(TFT_BLACK); // Fill sprite with black
+  eS_Screen_3.setTextColor(TFT_WHITE); // White text, no background
   //stextP2.setTextDatum(TL_DATUM);  // Bottom center coordinate datum
-  stextP2.drawRect(0,0,sTextP2Width,sTextP2Height,TFT_WHITE);
+  eS_Screen_3.drawRect(0,0,sTextP2Width,sTextP2Height,TFT_WHITE);
 
 //Enable STLink serial port
   Serial.begin(115200,SERIAL_8N1);
